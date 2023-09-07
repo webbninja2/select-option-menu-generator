@@ -1,0 +1,131 @@
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/css/custom.css">
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			<div class="page_title">
+				<div>
+					<h1>HTML Select Option Menu Generator</h1>
+				</div>
+			</div>
+			<div class="col-12 px-0 mt-3">
+				<h5 class="pheading">HTML Select Option Menu Menu. When you select the name of the option you selected it opens a new window or opens in an iframe or links to an open popup window.</h5>
+			</div>
+			<!-- Drag List Options -->
+			<div class="dragOptions">
+				<h2 class="secTitle">Add URL and Name</h2>
+				<div class="row-options">
+					<ul id="urlList">
+						<li class="lists">
+							<div class="drg"><i class="fa fa-sort"></i></div>
+							<div class="nbr">1</div>
+								<label class="lbl">Name:</label>
+								<input type="text" id="imageURL1" class="inputsText" placeholder="Or enter image URL"  value="Facebook">
+								<label class="lbl">URL:</label>
+								<input type="text" id="url1" class="inputsText" placeholder="Or enter image URL"  value="https://www.facebook.com/">
+							<div class="removeList"><i class="fa fa-close"></i></div>
+						</li>
+						<li class="lists">
+							<div class="drg"><i class="fa fa-sort"></i></div>
+							<div class="nbr">2</div>
+								<label class="lbl">Name:</label>
+								<input type="text" id="imageURL2" class="inputsText" placeholder="Or enter image URL"  value="Google">
+								<label class="lbl">URL:</label>
+								<input type="text" id="url2" class="inputsText" placeholder="Or enter image URL"  value="https://www.google.com/">
+							<div class="removeList"><i class="fa fa-close"></i></div>
+						</li>
+					</ul>
+					<p class="errorValList"></p>
+				</div>
+				<div class="addLinkList">
+					<a href="#" id="addNewLink" class="btn_fa slkt"><i class="fa fa-plus"></i><span>Add link box</span></a>
+				</div>
+			</div>
+			<!-- Link Open Options -->
+			<div class="linkOpenOptions">
+				<h2 class="secTitle">Link Open</h2>
+				<div class="row-options">
+					<ul id="linkOpenList">
+						<li class="linkOpenlists">
+							<input type="radio" value="on-change" name="link-open" id="on-change" class="inputRadioBox" checked>
+							<label for="on-change">On change link open</label>
+						</li>
+						<li class="linkOpenlists">
+							<input type="radio" value="button-click" name="link-open" class="inputRadioBox" id="button-click">
+							<label for="button-click">Use button click</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- Link Traget Options -->
+			<div class="linkTargetOptions">
+				<h2 class="secTitle">Link Target</h2>
+				<div class="row-options">
+					<ul id="linkTargetList">
+						<li class="linkTargetlists">
+							<input type="radio" value="open-same-window" name="link-target" id="open-same-window" class="inputRadioBox" checked>
+							<label for="open-same-window">Open the same window</label>
+						</li>
+						<li class="linkTargetlists">
+							<input type="radio" value="open-new-window" name="link-target" id="open-new-window" class="inputRadioBox">
+							<label for="open-new-window">Open a new window</label>
+						</li>
+						<li class="linkTargetlists">
+							<input type="radio" value="open-popup-window" name="link-target" id="open-popup-window" class="inputRadioBox">
+							<label for="open-popup-window">Open Popup Window</label>
+							<div class="popup-options" style="display: none;">
+								<label for="popup-width">Popup Width:</label>
+								<input type="text" name="popup-width" id="popup-width" class="inputsText" value="800">
+								<label for="popup-height">Popup Height:</label>
+								<input type="text" name="popup-height" id="popup-height" class="inputsText" value="500">
+							</div>
+						</li>
+						<li class="linkTargetlists">
+							<input type="radio" value="open-frame-window" name="link-target" id="open-frame-window" class="inputRadioBox">
+							<label for="open-frame-window">Open in an iframe</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- Set Style Options -->
+			<div class="styleOptions">
+				<h2 class="secTitle">Set Style</h2>
+				<div class="row-options">
+					<ul id="styleList">
+						<li class="stylelists">
+							<label>Width:</label>
+							<input type="number" name="width" id="width" class="inputsTextStyle" value="150">
+							<label>Background:</label>
+							<input type="text" name="bgcolor" id="bgcolor" class="inputsTextStyle" value="#ffffff">
+							<input type="color" name="bgcolorPicker" id="bgcolorPicker" class="inputColor" value="#ffffff">
+						</li>
+						<li class="stylelists">
+							<label>Font size:</label>
+							<input type="number" name="fontSize" id="fontSize" class="inputsTextStyle" value="13">
+							<label>Border:</label>
+							<input type="text" name="borderColor" id="borderColor" class="inputsTextStyle" value="#a9a9a9">
+							<input type="color" name="borderColorPicker" id="borderColorPicker" class="inputColor" value="#a9a9a9">
+						</li>
+						<li class="stylelists">
+							<label>padding:</label>
+							<input type="number" name="padding" id="padding" class="inputsTextStyle" value="1">
+							<label>color:</label>
+							<input type="text" name="fontColor" id="fontColor" class="inputsTextStyle" value="#000000">
+							<input type="color" name="fontColorPicker" id="fontColorPicker" class="inputColor" value="#000000">
+						</li>
+					</ul>
+				</div>
+			</div>
+			<button id="generateCodeButton"><img src="assets/image/tools2.png"> Generate Code</button>
+			<div id="generatedCodeBox">
+				<h5>HTML</h5>
+				<textarea id="generatedCode" rows="10" cols="90" style="resize: vertical;"></textarea>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="assets/js/custom.js"></script>
+	
+	
